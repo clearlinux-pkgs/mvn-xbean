@@ -4,16 +4,17 @@
 #
 Name     : mvn-xbean
 Version  : 3.4
-Release  : 2
+Release  : 3
 URL      : https://repo1.maven.org/maven2/org/apache/xbean/xbean-reflect/3.4/xbean-reflect-3.4.jar
 Source0  : https://repo1.maven.org/maven2/org/apache/xbean/xbean-reflect/3.4/xbean-reflect-3.4.jar
-Source1  : https://repo1.maven.org/maven2/org/apache/xbean/xbean-asm6-shaded/4.8/xbean-asm6-shaded-4.8.jar
-Source2  : https://repo1.maven.org/maven2/org/apache/xbean/xbean-asm6-shaded/4.8/xbean-asm6-shaded-4.8.pom
-Source3  : https://repo1.maven.org/maven2/org/apache/xbean/xbean-reflect/3.4/xbean-reflect-3.4.pom
-Source4  : https://repo1.maven.org/maven2/org/apache/xbean/xbean-reflect/3.7/xbean-reflect-3.7.jar
-Source5  : https://repo1.maven.org/maven2/org/apache/xbean/xbean-reflect/3.7/xbean-reflect-3.7.pom
-Source6  : https://repo1.maven.org/maven2/org/apache/xbean/xbean/3.4/xbean-3.4.pom
-Source7  : https://repo1.maven.org/maven2/org/apache/xbean/xbean/3.7/xbean-3.7.pom
+Source1  : https://repo.maven.apache.org/maven2/org/apache/xbean/xbean/4.8/xbean-4.8.pom
+Source2  : https://repo1.maven.org/maven2/org/apache/xbean/xbean-asm6-shaded/4.8/xbean-asm6-shaded-4.8.jar
+Source3  : https://repo1.maven.org/maven2/org/apache/xbean/xbean-asm6-shaded/4.8/xbean-asm6-shaded-4.8.pom
+Source4  : https://repo1.maven.org/maven2/org/apache/xbean/xbean-reflect/3.4/xbean-reflect-3.4.pom
+Source5  : https://repo1.maven.org/maven2/org/apache/xbean/xbean-reflect/3.7/xbean-reflect-3.7.jar
+Source6  : https://repo1.maven.org/maven2/org/apache/xbean/xbean-reflect/3.7/xbean-reflect-3.7.pom
+Source7  : https://repo1.maven.org/maven2/org/apache/xbean/xbean/3.4/xbean-3.4.pom
+Source8  : https://repo1.maven.org/maven2/org/apache/xbean/xbean/3.7/xbean-3.7.pom
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : Apache-2.0
@@ -36,28 +37,31 @@ data components for the mvn-xbean package.
 
 %install
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/apache/xbean/xbean-reflect/3.4
-cp %{SOURCE0} %{buildroot}/usr/share/java/.m2/repository/org/apache/xbean/xbean-reflect/3.4
+cp %{SOURCE0} %{buildroot}/usr/share/java/.m2/repository/org/apache/xbean/xbean-reflect/3.4/xbean-reflect-3.4.jar
+
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/apache/xbean/xbean/4.8
+cp %{SOURCE1} %{buildroot}/usr/share/java/.m2/repository/org/apache/xbean/xbean/4.8/xbean-4.8.pom
 
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/apache/xbean/xbean-asm6-shaded/4.8
-cp %{SOURCE1} %{buildroot}/usr/share/java/.m2/repository/org/apache/xbean/xbean-asm6-shaded/4.8
+cp %{SOURCE2} %{buildroot}/usr/share/java/.m2/repository/org/apache/xbean/xbean-asm6-shaded/4.8/xbean-asm6-shaded-4.8.jar
 
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/apache/xbean/xbean-asm6-shaded/4.8
-cp %{SOURCE2} %{buildroot}/usr/share/java/.m2/repository/org/apache/xbean/xbean-asm6-shaded/4.8
+cp %{SOURCE3} %{buildroot}/usr/share/java/.m2/repository/org/apache/xbean/xbean-asm6-shaded/4.8/xbean-asm6-shaded-4.8.pom
 
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/apache/xbean/xbean-reflect/3.4
-cp %{SOURCE3} %{buildroot}/usr/share/java/.m2/repository/org/apache/xbean/xbean-reflect/3.4
+cp %{SOURCE4} %{buildroot}/usr/share/java/.m2/repository/org/apache/xbean/xbean-reflect/3.4/xbean-reflect-3.4.pom
 
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/apache/xbean/xbean-reflect/3.7
-cp %{SOURCE4} %{buildroot}/usr/share/java/.m2/repository/org/apache/xbean/xbean-reflect/3.7
+cp %{SOURCE5} %{buildroot}/usr/share/java/.m2/repository/org/apache/xbean/xbean-reflect/3.7/xbean-reflect-3.7.jar
 
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/apache/xbean/xbean-reflect/3.7
-cp %{SOURCE5} %{buildroot}/usr/share/java/.m2/repository/org/apache/xbean/xbean-reflect/3.7
+cp %{SOURCE6} %{buildroot}/usr/share/java/.m2/repository/org/apache/xbean/xbean-reflect/3.7/xbean-reflect-3.7.pom
 
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/apache/xbean/xbean/3.4
-cp %{SOURCE6} %{buildroot}/usr/share/java/.m2/repository/org/apache/xbean/xbean/3.4
+cp %{SOURCE7} %{buildroot}/usr/share/java/.m2/repository/org/apache/xbean/xbean/3.4/xbean-3.4.pom
 
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/apache/xbean/xbean/3.7
-cp %{SOURCE7} %{buildroot}/usr/share/java/.m2/repository/org/apache/xbean/xbean/3.7
+cp %{SOURCE8} %{buildroot}/usr/share/java/.m2/repository/org/apache/xbean/xbean/3.7/xbean-3.7.pom
 
 
 %files
@@ -73,3 +77,4 @@ cp %{SOURCE7} %{buildroot}/usr/share/java/.m2/repository/org/apache/xbean/xbean/
 /usr/share/java/.m2/repository/org/apache/xbean/xbean-reflect/3.7/xbean-reflect-3.7.pom
 /usr/share/java/.m2/repository/org/apache/xbean/xbean/3.4/xbean-3.4.pom
 /usr/share/java/.m2/repository/org/apache/xbean/xbean/3.7/xbean-3.7.pom
+/usr/share/java/.m2/repository/org/apache/xbean/xbean/4.8/xbean-4.8.pom
