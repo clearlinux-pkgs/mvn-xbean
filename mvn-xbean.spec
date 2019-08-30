@@ -4,7 +4,7 @@
 #
 Name     : mvn-xbean
 Version  : 3.4
-Release  : 3
+Release  : 4
 URL      : https://repo1.maven.org/maven2/org/apache/xbean/xbean-reflect/3.4/xbean-reflect-3.4.jar
 Source0  : https://repo1.maven.org/maven2/org/apache/xbean/xbean-reflect/3.4/xbean-reflect-3.4.jar
 Source1  : https://repo.maven.apache.org/maven2/org/apache/xbean/xbean/4.8/xbean-4.8.pom
